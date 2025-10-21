@@ -1,0 +1,23 @@
+From cbb90b16296ecad3866659ff00431fbed0a660c4 Mon Sep 17 00:00:00 2001
+From: Carlos Adames <92492690+CeeJay-RD@users.noreply.github.com>
+Date: Tue, 11 Jun 2024 00:25:24 -0400
+Subject: [PATCH] Added priority to H4 width class so it is not overwritten by
+ other themes
+
+---
+ Daily Note Themes.css | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Daily Note Themes.css b/Daily Note Themes.css
+index 1118599..0058c4b 100644
+--- a/Daily Note Themes.css	
++++ b/Daily Note Themes.css	
+@@ -115,7 +115,7 @@ change or remove those font-family lines from this snippet.
+   margin-bottom: 0;
+   padding-top: 0;
+   font-size: 20px;
+-  width: fit-content;
++  width: fit-content !important;
+   padding-left: 6px;
+   padding-right: 6px;
+   /* border: solid; */

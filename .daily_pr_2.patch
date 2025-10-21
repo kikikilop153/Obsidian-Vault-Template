@@ -1,0 +1,130 @@
+From da3d867ae40f29e16ad521a503d06d94eaba173c Mon Sep 17 00:00:00 2001
+From: Cody Joy <myphonecodyjoy@gmail.com>
+Date: Fri, 12 Apr 2024 20:46:25 -0400
+Subject: [PATCH 1/3] Update Daily Note Themes.css
+
+Added uppercase css classes for days of of the week. The "Daily (Vanilla).md" to can now use {{date:dddd}} as one of the "cssclasses" with any issues.
+---
+ Daily Note Themes.css | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+diff --git a/Daily Note Themes.css b/Daily Note Themes.css
+index 8146b8a..29f635a 100644
+--- a/Daily Note Themes.css	
++++ b/Daily Note Themes.css	
+@@ -1,5 +1,5 @@
+ /*------------------------------------------------------------------------------
+-                     Daily Note Themes by CyanVoxel v1.0.3
++                     Daily Note Themes by CyanVoxel v1.0.4
+ 
+ These are a set of 7 main CSS classes that can be used to apply individual color
+ schemes to daily notes for each day of the week.
+@@ -47,37 +47,37 @@ change or remove those font-family lines from this snippet.
+   --pill-cover-hover: color-mix(in srgb, var(--highlight) 60%, transparent);
+ }
+ 
+-.sunday {
++.sunday, .Sunday {
+   --highlight: #f39caa;
+   --primary: #f6466f;
+   --dark: #2d0916;
+ }
+-.monday {
++.monday, .Monday {
+   --highlight: #fcadaa;
+   --primary: #f65848;
+   --dark: #3c0e0b;
+ }
+-.tuesday {
++.tuesday, .Tuesday {
+   --highlight: #aedbfa;
+   --primary: #3b87f0;
+   --dark: #070615;
+ }
+-.wednesday {
++.wednesday, .Wednesday {
+   --highlight: #fff3c4;
+   --primary: #ffd63d;
+   --dark: #2c1404;
+ }
+-.thursday {
++.thursday, .Thursday {
+   --highlight: #f7b79b;
+   --primary: #ed6022;
+   --dark: #210b04;
+ }
+-.friday {
++.friday, .Friday {
+   --highlight: #e9f9b7;
+   --primary: #92e649;
+   --dark: #192108;
+ }
+-.saturday {
++.saturday, .Saturday{
+   --highlight: #f39caa;
+   --primary: #e22c3c;
+   --dark: #100305;
+@@ -144,13 +144,13 @@ change or remove those font-family lines from this snippet.
+   margin-right: auto !important;
+ }
+ 
+-:is(.sunday,
+-.monday,
+-.tuesday,
+-.wednesday,
+-.thursday,
+-.friday,
+-.saturday
++:is(.sunday, .Sunday,
++.monday, .Monday,
++.tuesday, .Tuesday,
++.wednesday, .Wednesday,
++.thursday, .Thursday,
++.friday, .Friday,
++.saturday, .Saturday
+   )
+   svg {
+   color: color-mix(in srgb, var(--highlight) 60%, transparent);
+
+From e27704c1087e9a794bc26ee386f2c4b67c215e57 Mon Sep 17 00:00:00 2001
+From: Cody Joy <myphonecodyjoy@gmail.com>
+Date: Fri, 12 Apr 2024 20:52:42 -0400
+Subject: [PATCH 2/3] v1.0.5
+
+Updated to right version
+---
+ Daily Note Themes.css | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Daily Note Themes.css b/Daily Note Themes.css
+index 29f635a..1118599 100644
+--- a/Daily Note Themes.css	
++++ b/Daily Note Themes.css	
+@@ -1,5 +1,5 @@
+ /*------------------------------------------------------------------------------
+-                     Daily Note Themes by CyanVoxel v1.0.4
++                     Daily Note Themes by CyanVoxel v1.0.5
+ 
+ These are a set of 7 main CSS classes that can be used to apply individual color
+ schemes to daily notes for each day of the week.
+
+From 6c6657ed56242793b4e359b3dc8ee4ae73f0c3d8 Mon Sep 17 00:00:00 2001
+From: Cody Joy <myphonecodyjoy@gmail.com>
+Date: Fri, 12 Apr 2024 20:53:51 -0400
+Subject: [PATCH 3/3] v1.0.5
+
+Updated readme version
+---
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index a4adc1c..4ba05ef 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,4 @@
+-# Obsidian-Daily-Themes v1.0.4
++# Obsidian-Daily-Themes v1.0.5
+ ## A Series of Daily Theme CSS Snippets for Obsidian.
+ 
+ ![](title.png)

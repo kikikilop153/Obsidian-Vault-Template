@@ -1,0 +1,54 @@
+From 9261a4c388843bf88e495921f2298aee20908232 Mon Sep 17 00:00:00 2001
+From: Fire <162488526+Fire0nTop@users.noreply.github.com>
+Date: Mon, 4 Nov 2024 15:19:59 +0100
+Subject: [PATCH 1/2] Fix - added new css variable --embed-border-start to
+ no-embed-border class
+
+---
+ Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css b/Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css
+index 9b7165a..cabaac6 100644
+--- a/Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css	
++++ b/Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css	
+@@ -52,6 +52,7 @@ img {
+ 
+ .no-embed-border {
+   --embed-border-left: 0px solid black !important;
++  --embed-border-start: 0px solid black !important;
+ }
+ 
+ /* .markdown-preview-view */
+@@ -79,4 +80,4 @@ img {
+ 
+ code {
+   font-family: "JetBrainsMono Nerd Font Mono", monospace;
+-}
+\ No newline at end of file
++}
+
+From ab3dac9af8e5529fb6b8ac263dc7c69e37578949 Mon Sep 17 00:00:00 2001
+From: Fire <162488526+Fire0nTop@users.noreply.github.com>
+Date: Mon, 4 Nov 2024 15:48:04 +0100
+Subject: [PATCH 2/2] Added the no-embed-title class to hide the embed title.
+
+---
+ Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css b/Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css
+index cabaac6..75e2efa 100644
+--- a/Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css	
++++ b/Vault/.obsidian/snippets/CyanVoxel's General Tweaks.css	
+@@ -55,6 +55,10 @@ img {
+   --embed-border-start: 0px solid black !important;
+ }
+ 
++.no-embed-title .embed-title.markdown-embed-title {
++  display: none;
++}
++
+ /* .markdown-preview-view */
+ .markdown-preview-view {
+   border-radius: 6px;

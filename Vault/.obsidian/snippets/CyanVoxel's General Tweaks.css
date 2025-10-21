@@ -52,6 +52,7 @@ img {
 
 .no-embed-border {
   --embed-border-left: 0px solid black !important;
+  --embed-border-start: 0px solid black !important;
 }
 
 /* .markdown-preview-view */
@@ -79,4 +80,8 @@ img {
 
 code {
   font-family: "JetBrainsMono Nerd Font Mono", monospace;
+}
+
+.no-embed-title .embed-title.markdown-embed-title {
+  display: none;
 }

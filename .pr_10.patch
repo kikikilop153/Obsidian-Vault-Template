@@ -1,0 +1,51 @@
+From 7a0c589ced16c7c12619242e68a20e1afc3b27b6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Alp=20Sar=C4=B1yer?=
+ <63670898+ravenwits@users.noreply.github.com>
+Date: Sun, 5 Oct 2025 13:53:44 +0300
+Subject: [PATCH] fix(template): resolve invalid date format error in daily
+ note
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+What Changed & Why
+
+date: line → combined date and time into one line using YYYY-MM-DD[T]HH:mm (ISO-like format).
+
+Removed tp.file.title reference → that’s what was causing the invalid format error when the file title didn’t match YYYYMMDD.
+
+Added weekday CSS class directly via tp.date.now("dddd").toLowerCase() — now you’ll always get a valid weekday class like monday, tuesday, etc.
+
+Works perfectly whether your file is called 2025-10-05.md, Daily Note.md, or anything else.
+---
+ Vault/99 - Meta/00 - Templates/(TEMPLATE) Daily.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/Vault/99 - Meta/00 - Templates/(TEMPLATE) Daily.md b/Vault/99 - Meta/00 - Templates/(TEMPLATE) Daily.md
+index 9b80843..3a9b42f 100644
+--- a/Vault/99 - Meta/00 - Templates/(TEMPLATE) Daily.md	
++++ b/Vault/99 - Meta/00 - Templates/(TEMPLATE) Daily.md	
+@@ -1,13 +1,13 @@
+ ---
+-date: <%tp.date.now("YYYY-MM-DD")%>T<%tp.date.now("HH:mm")%>
++date: <% tp.date.now("YYYY-MM-DD[T]HH:mm") %>
+ tags:
+   - Daily
+ cssclasses:
+   - daily
+-  <% "- " + tp.date.now("dddd", 0, tp.file.title, "YYYYMMDD").toLowerCase() %>
++  - <% tp.date.now("dddd").toLowerCase() %>
+ ---
+ # DAILY NOTE
+-## <% tp.date.now("dddd, MMMM Do, YYYY", 0, tp.file.title, "YYYYMMDD") %>
++## <% tp.date.now("dddd, MMMM Do, YYYY") %>
+ ***
+ ### Journal
+ #### TIME
+@@ -17,4 +17,4 @@ Customize this template to your liking!
+ ### Tasks
+ - [ ] Task 1
+ - [ ] Task 2
+-- [ ] Task 3
+\ No newline at end of file
++- [ ] Task 3

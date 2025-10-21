@@ -1,0 +1,33 @@
+From 98ebe8dd25b8dc34d97f14899b6f421e5c6f3dbf Mon Sep 17 00:00:00 2001
+From: ansoniikun <hm_utilities@tuta.com>
+Date: Sat, 27 Jul 2024 02:05:43 +0200
+Subject: [PATCH] Fixed yaml syntax to work by default
+
+---
+ (TEMPLATE) Daily.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/(TEMPLATE) Daily.md b/(TEMPLATE) Daily.md
+index 9b80843..99d689e 100644
+--- a/(TEMPLATE) Daily.md	
++++ b/(TEMPLATE) Daily.md	
+@@ -4,10 +4,10 @@ tags:
+   - Daily
+ cssclasses:
+   - daily
+-  <% "- " + tp.date.now("dddd", 0, tp.file.title, "YYYYMMDD").toLowerCase() %>
++  <% "- " + tp.date.now("dddd") %>
+ ---
+ # DAILY NOTE
+-## <% tp.date.now("dddd, MMMM Do, YYYY", 0, tp.file.title, "YYYYMMDD") %>
++## <% tp.date.now("dddd, MMMM Do, YYYY") %>
+ ***
+ ### Journal
+ #### TIME
+@@ -17,4 +17,4 @@ Customize this template to your liking!
+ ### Tasks
+ - [ ] Task 1
+ - [ ] Task 2
+-- [ ] Task 3
+\ No newline at end of file
++- [ ] Task 3

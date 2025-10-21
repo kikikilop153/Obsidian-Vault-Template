@@ -1,0 +1,22 @@
+/* Recolor Variants — prebuilt --image-effect presets and helpers */
+
+/* Helper to disable inversion quickly */
+.recolor-no-invert { --recolor-invert: none !important; }
+
+/* Preset: dark-ink on white (default behavior) */
+.recolor-variant-dark-ink { --image-effect: invert(14%) sepia(19%) saturate(296%) hue-rotate(5deg) brightness(90%) contrast(96%); }
+
+/* Preset: blueprint (white ink on dark blue) */
+.recolor-variant-blueprint { --image-effect: invert(89%) sepia(1%) saturate(2714%) hue-rotate(196deg) brightness(107%) contrast(98%); }
+
+/* Preset: green pen */
+.recolor-variant-green { --image-effect: invert(52%) sepia(60%) saturate(2521%) hue-rotate(105deg) brightness(96%) contrast(84%); }
+
+/* Usage examples (apply the class to a container with .recolor-images):
+
+<div class="recolor-images recolor-variant-blueprint"> ... </div>
+
+To disable invert for a specific child element:
+
+.recolor-images .excalidraw { --recolor-invert: none; }
+*/
