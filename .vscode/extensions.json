@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "automatalabs.copilot-mcp",
+        "bbenoist.shell",
+        "tetradresearch.vscode-h2o",
+        "foxundermoon.shell-format",
+        "remcoros.startanyshell",
+        "mccarter.start-git-bash",
+        "jcdj666.uv-run",
+        "the0807.uv-toolkit",
+        "donjayamanne.git-extension-pack",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "leizongmin.node-module-intellisense",
+        "arcsine.npx-scripts",
+        "antfu.auto-npx",
+        "jacksonjim.keil-vscode-assistant",
+        "evils.uniapp-vscode"
+    ]
+}
